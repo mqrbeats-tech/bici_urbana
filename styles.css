@@ -1,0 +1,255 @@
+/* ===============================
+   VARIABLES CSS - obligatorio :root
+   IA sugirió los nombres de variables
+   =============================== */
+:root {
+  --color-primario: #2e7d32;
+  --color-texto: #222222;
+  --color-fondo: #f5f5f5;
+  --color-blanco: #ffffff;
+  --color-acento: #ff8f00;
+  --color-header: #1b2e1c;
+}
+
+/* ===============================
+   ESTILOS GENERALES
+   =============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+}
+
+/* ===============================
+   HEADER Y NAV
+   IA generó el Flexbox para alinear el nav
+   =============================== */
+header {
+  background-color: var(--color-header);
+  color: var(--color-blanco);
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header h1 {
+  font-size: 1.5rem;
+  color: #66bb6a;
+}
+
+/* Flexbox obligatorio en nav ul */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  justify-content: flex-end;
+}
+
+nav ul li a {
+  color: var(--color-blanco);
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+nav ul li a:hover {
+  color: #66bb6a;
+}
+
+/* ===============================
+   SECCIÓN INICIO / HERO
+   =============================== */
+#inicio {
+  background-color: var(--color-header);
+  color: var(--color-blanco);
+  text-align: center;
+  padding: 60px 20px;
+}
+
+#inicio h2 {
+  font-size: 2rem;
+  color: #66bb6a;
+  margin-bottom: 15px;
+}
+
+#inicio p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #ccc;
+}
+
+.btn-cta {
+  background-color: var(--color-acento);
+  color: var(--color-blanco);
+  padding: 12px 28px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.btn-cta:hover {
+  background-color: #e65100;
+}
+
+/* ===============================
+   SECCIÓN SERVICIOS
+   IA generó el Grid de 3 columnas
+   =============================== */
+#servicios {
+  padding: 50px 30px;
+  text-align: center;
+}
+
+#servicios h2 {
+  font-size: 1.8rem;
+  color: var(--color-primario);
+  margin-bottom: 30px;
+}
+
+/* Grid obligatorio: 3 columnas iguales */
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.tarjeta {
+  background-color: var(--color-blanco);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 25px 20px;
+  text-align: center;
+}
+
+.tarjeta .icono {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.tarjeta h3 {
+  color: var(--color-primario);
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+}
+
+.tarjeta p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* ===============================
+   SECCIÓN NOSOTROS
+   =============================== */
+#nosotros {
+  background-color: #e8f5e9;
+  padding: 50px 30px;
+}
+
+#nosotros h2 {
+  font-size: 1.8rem;
+  color: var(--color-primario);
+  margin-bottom: 20px;
+}
+
+.nosotros-contenido {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nosotros-contenido p {
+  flex: 2;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.foto-local {
+  flex: 1;
+  background-color: #c8e6c9;
+  border: 2px dashed var(--color-primario);
+  border-radius: 8px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primario);
+  font-weight: bold;
+}
+
+/* ===============================
+   SECCIÓN CONTACTO / FORMULARIO
+   =============================== */
+#contacto {
+  padding: 50px 30px;
+  max-width: 550px;
+  margin: 0 auto;
+}
+
+#contacto h2 {
+  font-size: 1.8rem;
+  color: var(--color-primario);
+  margin-bottom: 25px;
+}
+
+#contacto label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+#contacto input,
+#contacto select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bbb;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+#contacto input:focus,
+#contacto select:focus {
+  outline: none;
+  border-color: var(--color-primario);
+}
+
+#contacto button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#contacto button:hover {
+  background-color: #1b5e20;
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+footer {
+  background-color: var(--color-header);
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.85rem;
+}
